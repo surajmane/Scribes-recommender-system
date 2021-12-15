@@ -7,6 +7,21 @@ It could be either run on command prompt or as a module. On command promt the ar
 
 To run, simply run the recommender.py script on the command prompt.
 
+The packages required are:
+
+from bs4 import BeautifulSoup
+import sys
+import urllib
+import requests
+from googlesearch import search
+import nltk
+from nltk.tokenize import sent_tokenize
+from nltk.tokenize import word_tokenize
+from textstat.textstat import textstatistics,legacy_round
+from nltk.corpus import stopwords
+import textstat
+from PyPDF2 import PdfFileReader
+
 Mechanics:
 - The query given by the user is sent to the Google Search API which returns the results in the form of URLs. Picking first 50 results.
 - Saving these urls to a file and then reading each url to access files in it(focusing on just the pdf files).
